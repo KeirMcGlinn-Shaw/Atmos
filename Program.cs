@@ -8,6 +8,8 @@ namespace AtmosMusicBot
     class Program
     {
         /*
+         * Program entry point
+         * 
          *  Main method synchronus
          */
         static void Main(string[] args) => new Program().MainAsync().GetAwaiter().GetResult();
