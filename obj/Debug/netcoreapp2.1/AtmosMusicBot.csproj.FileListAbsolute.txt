@@ -9,3 +9,4 @@ C:\Users\keirm\source\repos\AtmosMusicBot\obj\Debug\netcoreapp2.1\AtmosMusicBot.
 C:\Users\keirm\source\repos\AtmosMusicBot\bin\Debug\netcoreapp2.1\AtmosMusicBot.pdb
 C:\Users\keirm\source\repos\AtmosMusicBot\obj\Debug\netcoreapp2.1\AtmosMusicBot.dll
 C:\Users\keirm\source\repos\AtmosMusicBot\obj\Debug\netcoreapp2.1\AtmosMusicBot.pdb
+C:\Users\keirm\source\repos\AtmosMusicBot\bin\Debug\netcoreapp2.1\Services\config.json
