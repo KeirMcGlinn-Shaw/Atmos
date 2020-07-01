@@ -1,5 +1,6 @@
 # Atmos
-Atmos is a Discord bot :)
+Atmos is a Discord bot :)</br>
+Work in progress
 
 ## What is Atmos used for?
 The plan is for Atmos to be a music bot which will be used to provide atmospheric music for D&D sessions
