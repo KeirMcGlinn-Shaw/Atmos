@@ -6,6 +6,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using AtmosMusicBot;
 using Discord;
+using Discord.Audio;
 using Discord.Commands;
 using Discord.WebSocket;
 using Newtonsoft.Json;
@@ -20,6 +21,8 @@ class Program
     private string token;
     // Will hold the prefix string used to define commands to this bot
     private string prefix;
+
+    //public DiscordSocketClient Client { get => _client; }
 
     // Program entry point
     static void Main(string[] args)
