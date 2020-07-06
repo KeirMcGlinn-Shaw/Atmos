@@ -11,11 +11,11 @@ using Discord.Commands;
 using Discord.WebSocket;
 using Newtonsoft.Json;
 
-class Program
+class Atmos
 {
     private readonly DiscordSocketClient _client;
 
-    private readonly CommandService _commands;
+    private readonly CommandService _commandService;
 
     // Will hold the token key used to connect to the discord socket client
     private string token;
@@ -29,21 +29,21 @@ class Program
     {
         // Call the Program constructor, followed by the 
         // MainAsync method and wait until it finishes (which should be never).
-        new Program().MainAsync().GetAwaiter().GetResult();
+        new Atmos().MainAsync().GetAwaiter().GetResult();
     }
 
-    private Program()
+    private Atmos()
     {
         _client = new DiscordSocketClient(new DiscordSocketConfig
         {
             // Specify logging level
-            LogLevel = LogSeverity.Info,
+            LogLevel = LogSeverity.Debug,
         });
 
-        _commands = new CommandService(new CommandServiceConfig
+        _commandService = new CommandService(new CommandServiceConfig
         {
             // Again, log level:
-            LogLevel = LogSeverity.Info,
+            LogLevel = LogSeverity.Debug,
 
             // Remove need for commands to be case sensitive
             CaseSensitiveCommands = false,
@@ -51,7 +51,7 @@ class Program
 
         // Subscribe the logging handler to both the client and the CommandService.
         _client.Log += Log;
-        _commands.Log += Log;
+        _commandService.Log += Log;
 
     }
 
@@ -121,7 +121,7 @@ class Program
     private async Task InitCommands()
     {
         // Search program and add all Module classes that are discovered
-        await _commands.AddModulesAsync(Assembly.GetEntryAssembly(), null);
+        await _commandService.AddModulesAsync(Assembly.GetEntryAssembly(), null);
 
 
         // Subscribe a handler to see if a message invokes a command.
@@ -148,7 +148,7 @@ class Program
 
             // Execute the command. (result does not indicate a return value, 
             // rather an object stating if the command executed successfully).
-            var result = await _commands.ExecuteAsync(context, pos, null);
+            var result = await _commandService.ExecuteAsync(context, pos, null);
 
             // Send message if command fails (does not catch errors from commands with 'RunMode.Async', subscribe a handler for '_commands.CommandExecuted' to see those)
             if (!result.IsSuccess && result.Error != CommandError.UnknownCommand)

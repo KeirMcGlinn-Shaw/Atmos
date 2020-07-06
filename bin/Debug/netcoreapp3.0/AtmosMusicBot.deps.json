@@ -1,11 +1,11 @@
 {
   "runtimeTarget": {
-    "name": ".NETCoreApp,Version=v2.1",
+    "name": ".NETCoreApp,Version=v3.0",
     "signature": ""
   },
   "compilationOptions": {},
   "targets": {
-    ".NETCoreApp,Version=v2.1": {
+    ".NETCoreApp,Version=v3.0": {
       "AtmosMusicBot/1.0.0": {
         "dependencies": {
           "Discord.Net": "2.2.0"
@@ -28,7 +28,7 @@
           "Discord.Net.Core": "2.2.0"
         },
         "runtime": {
-          "lib/netstandard2.0/Discord.Net.Commands.dll": {
+          "lib/netstandard2.1/Discord.Net.Commands.dll": {
             "assemblyVersion": "2.2.0.0",
             "fileVersion": "2.2.0.0"
           }
@@ -41,7 +41,7 @@
           "System.Interactive.Async": "4.0.0"
         },
         "runtime": {
-          "lib/netstandard2.0/Discord.Net.Core.dll": {
+          "lib/netstandard2.1/Discord.Net.Core.dll": {
             "assemblyVersion": "2.2.0.0",
             "fileVersion": "2.2.0.0"
           }
@@ -52,7 +52,7 @@
           "Discord.Net.Core": "2.2.0"
         },
         "runtime": {
-          "lib/netstandard2.0/Discord.Net.Rest.dll": {
+          "lib/netstandard2.1/Discord.Net.Rest.dll": {
             "assemblyVersion": "2.2.0.0",
             "fileVersion": "2.2.0.0"
           }
@@ -64,7 +64,7 @@
           "Discord.Net.Rest": "2.2.0"
         },
         "runtime": {
-          "lib/netstandard2.0/Discord.Net.Webhook.dll": {
+          "lib/netstandard2.1/Discord.Net.Webhook.dll": {
             "assemblyVersion": "2.2.0.0",
             "fileVersion": "2.2.0.0"
           }
@@ -76,20 +76,14 @@
           "Discord.Net.Rest": "2.2.0"
         },
         "runtime": {
-          "lib/netstandard2.0/Discord.Net.WebSocket.dll": {
+          "lib/netstandard2.1/Discord.Net.WebSocket.dll": {
             "assemblyVersion": "2.2.0.0",
             "fileVersion": "2.2.0.0"
           }
         }
       },
-      "Microsoft.Bcl.AsyncInterfaces/1.0.0": {
-        "runtime": {
-          "lib/netstandard2.0/Microsoft.Bcl.AsyncInterfaces.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "4.700.19.46214"
-          }
-        }
-      },
+      "Microsoft.NETCore.Platforms/1.1.0": {},
+      "Microsoft.NETCore.Targets/1.1.0": {},
       "Newtonsoft.Json/12.0.2": {
         "runtime": {
           "lib/netstandard2.0/Newtonsoft.Json.dll": {
@@ -100,6 +94,8 @@
       },
       "System.Collections/4.3.0": {
         "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Targets": "1.1.0",
           "System.Runtime": "4.3.0"
         }
       },
@@ -117,11 +113,15 @@
       },
       "System.Diagnostics.Debug/4.3.0": {
         "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Targets": "1.1.0",
           "System.Runtime": "4.3.0"
         }
       },
       "System.Globalization/4.3.0": {
         "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Targets": "1.1.0",
           "System.Runtime": "4.3.0"
         }
       },
@@ -130,7 +130,7 @@
           "System.Linq.Async": "4.0.0"
         },
         "runtime": {
-          "lib/netstandard2.0/System.Interactive.Async.dll": {
+          "lib/netcoreapp3.0/System.Interactive.Async.dll": {
             "assemblyVersion": "4.0.0.0",
             "fileVersion": "4.0.0.2"
           }
@@ -138,6 +138,8 @@
       },
       "System.IO/4.3.0": {
         "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Targets": "1.1.0",
           "System.Runtime": "4.3.0",
           "System.Text.Encoding": "4.3.0",
           "System.Threading.Tasks": "4.3.0"
@@ -153,11 +155,8 @@
         }
       },
       "System.Linq.Async/4.0.0": {
-        "dependencies": {
-          "Microsoft.Bcl.AsyncInterfaces": "1.0.0"
-        },
         "runtime": {
-          "lib/netstandard2.0/System.Linq.Async.dll": {
+          "lib/netcoreapp3.0/System.Linq.Async.dll": {
             "assemblyVersion": "4.0.0.0",
             "fileVersion": "4.0.0.2"
           }
@@ -165,6 +164,8 @@
       },
       "System.Reflection/4.3.0": {
         "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Targets": "1.1.0",
           "System.IO": "4.3.0",
           "System.Reflection.Primitives": "4.3.0",
           "System.Runtime": "4.3.0"
@@ -172,24 +173,37 @@
       },
       "System.Reflection.Primitives/4.3.0": {
         "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Targets": "1.1.0",
           "System.Runtime": "4.3.0"
         }
       },
       "System.Resources.ResourceManager/4.3.0": {
         "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Targets": "1.1.0",
           "System.Globalization": "4.3.0",
           "System.Reflection": "4.3.0",
           "System.Runtime": "4.3.0"
         }
       },
-      "System.Runtime/4.3.0": {},
+      "System.Runtime/4.3.0": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Targets": "1.1.0"
+        }
+      },
       "System.Runtime.Extensions/4.3.0": {
         "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Targets": "1.1.0",
           "System.Runtime": "4.3.0"
         }
       },
       "System.Text.Encoding/4.3.0": {
         "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Targets": "1.1.0",
           "System.Runtime": "4.3.0"
         }
       },
@@ -201,6 +215,8 @@
       },
       "System.Threading.Tasks/4.3.0": {
         "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Targets": "1.1.0",
           "System.Runtime": "4.3.0"
         }
       }
@@ -254,12 +270,19 @@
       "path": "discord.net.websocket/2.2.0",
       "hashPath": "discord.net.websocket.2.2.0.nupkg.sha512"
     },
-    "Microsoft.Bcl.AsyncInterfaces/1.0.0": {
+    "Microsoft.NETCore.Platforms/1.1.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-K63Y4hORbBcKLWH5wnKgzyn7TOfYzevIEwIedQHBIkmkEBA9SCqgvom+XTuE+fAFGvINGkhFItaZ2dvMGdT5iw==",
-      "path": "microsoft.bcl.asyncinterfaces/1.0.0",
-      "hashPath": "microsoft.bcl.asyncinterfaces.1.0.0.nupkg.sha512"
+      "sha512": "sha512-kz0PEW2lhqygehI/d6XsPCQzD7ff7gUJaVGPVETX611eadGsA3A877GdSlU0LRVMCTH/+P3o2iDTak+S08V2+A==",
+      "path": "microsoft.netcore.platforms/1.1.0",
+      "hashPath": "microsoft.netcore.platforms.1.1.0.nupkg.sha512"
+    },
+    "Microsoft.NETCore.Targets/1.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-aOZA3BWfz9RXjpzt0sRJJMjAscAUm3Hoa4UWAfceV9UTYxgwZ1lZt5nO2myFf+/jetYQo4uTP7zS8sJY67BBxg==",
+      "path": "microsoft.netcore.targets/1.1.0",
+      "hashPath": "microsoft.netcore.targets.1.1.0.nupkg.sha512"
     },
     "Newtonsoft.Json/12.0.2": {
       "type": "package",

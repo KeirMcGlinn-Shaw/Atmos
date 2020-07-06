@@ -1,3 +1,7 @@
 ﻿# Project specific gitignore
 
 config.json
+
+# Ignore Lavalink dependencies
+Lavalink.jar
+application.yml

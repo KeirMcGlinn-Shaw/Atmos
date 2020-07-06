@@ -22,5 +22,20 @@ namespace AtmosMusicBot
         public Task SayAsync([Remainder] [Summary("The text to echo")] string echo)
             => ReplyAsync(echo);
 
+        // TODO Complete command
+        //[Command("commands")]
+        //[Summary("Lists all of Atmos' commands.")]
+        //public async Task ListCommands()
+        //{
+        //    string commands;
+
+        //    var commandInfo = new StringBuilder();
+
+        //    commandInfo.Append();
+
+
+        //    await ReplyAsync(commands);
+        //}
+
     }
 }
